@@ -1,0 +1,55 @@
+<div class="container mt-3">
+    <h4 style="color: #7D6E83;">Data Telur</h4>
+    <hr>
+    <ul class="list-group my-2">
+        <% data.forEach(telur=> { %>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Jenis Telur</small> <br />
+                        <%= telur.jenis_telur %>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Stok</small> <br />
+                        <%= telur.stok %>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Harga/Kg</small> <br />
+                        Rp <%= telur.harga %>
+
+                    </div>
+
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Action</small> <br />
+
+                        <!-- button edit -->
+                        <a href="/telur/edit/<%= telur.id %>">
+                            <button class="btn btn-sm btn-primary">
+                                Edit
+                            </button>
+                        </a>
+
+                        <!-- button delete -->
+                        <a href="/telur/delete/<%= telur.id %>"
+                            onclick="return confirm(`Apakah Anda yakin ingin menghapus data ini?`)">
+                            <button class="btn btn-sm btn-danger">
+                                Hapus
+                            </button>
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+            <% }) %>
+    </ul>
+
+    <!-- button add new data -->
+    <a href="/telur/add">
+        <button class="btn btn-md btn-success">
+            Tambah Data
+        </button>
+    </a>
+
+</div>

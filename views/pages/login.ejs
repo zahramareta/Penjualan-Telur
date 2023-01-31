@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg World | LOGIN</title>
+</head>
+
+<body>
+    <div style="margin: 0; padding: 0; font-family: sans-serif;">
+        <div class="banner"
+            style="width: 100%; height: 100vh; background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('https://th.bing.com/th/id/R.332a4c503c34ff7b075122436bfc8dbf?rik=r7Jx9ePfOHiAVA&riu=http%3a%2f%2fanekatop10.com%2fwp-content%2fuploads%2f2015%2f06%2fTelur-rebus.jpg&ehk=aWN95ArRbhAtva8N3dPE2R7ryH1A%2bG3%2bqwDxKIhgCWo%3d&risl=&pid=ImgRaw&r=0'); background-position: center; position: absolute;">
+            <div class="form-box" style="width: 380px; height: 480px; position: relative; margin: 6% auto; background: #fff; padding: 5px; overflow: hidden;">
+            <h1 style="text-align: center; color:#76BA99; font-family: bakso sapi">
+                EGG WORLD
+            </h1>
+                <div class="button-box" style="width: 220px; margin: 35px auto; position: relative; box-shadow: 0 0 20px 9px #CFF5E7; border-radius: 30px;">
+                    <div id="btn" style="top: 0%; left: 0%; position: absolute; width: 110px; height: 100%; background: linear-gradient(to right, #76BA99, #CFF5E7); border-radius: 30px; transition: 0.5s;"></div>
+                    <button type="button" class="toggle-btn" onclick="signin()" style="padding: 10px 30px; cursor: pointer; background: transparent; border: 0; outline: none; position: relative;">
+                        Sign In
+                    </button>
+                    <button type="button" class="toggle-btn" onclick="register()" style="padding: 10px 30px; cursor: pointer; background: transparent; border: 0; outline: none; position: relative;">
+                        Sign Up
+                    </button>
+                </div>
+                <form action="/auth" method="post" id="signin" class="input-group" style="top: 180px; position: absolute; width: 280px; transition: .5s; left: 50px;">
+                    <input name="username" type="text" class="input-field" placeholder="User Id" style="width: 100%; padding: 10px 0; margin: 5px 0; border-left: 0; border-top: 0; border-right: 0; border-bottom: 1px solid #999; outline: none; background: transparent;" required>
+                    <input name="password" type="password" class="input-field" placeholder="Enter Password" style="width: 100%; padding: 10px 0; margin: 5px 0; border-left: 0; border-top: 0; border-right: 0; border-bottom: 1px solid #999; outline: none; background: transparent;" required>
+                    <input type="checkbox" class="check-box" style="margin: 30px 10px 30px 0;"><span style="color: #777; font-size: 12px; bottom: 68px; position: absolute;">
+                        Remember Password
+                    </span>
+                    <button type="submit" class="submit-btn" style="width: 85%; padding: 10px 30px; cursor: pointer; display: block; margin: auto; background: linear-gradient(to right, #76BA99, #CFF5E7); outline: none; border-radius: 30px;">
+                        Sign In
+                    </button>
+                </form>
+                <form action="/auth" method="post" id="register" class="input-group" style="top: 180px;position: absolute; width: 280px; transition: .5s; left: 450px;">
+                    <input type="text" class="input-field" placeholder="User Id" style="width: 100%; padding: 10px 0; margin: 5px 0; border-left: 0; border-top: 0; border-right: 0; border-bottom: 1px solid #999; outline: none; background: transparent;" required>
+                    <input type="email" class="input-field" placeholder="Email Id" style="width: 100%; padding: 10px 0; margin: 5px 0; border-left: 0; border-top: 0; border-right: 0; border-bottom: 1px solid #999; outline: none; background: transparent;" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" style="width: 100%; padding: 10px 0; margin: 5px 0; border-left: 0; border-top: 0; border-right: 0; border-bottom: 1px solid #999; outline: none; background: transparent;" required>
+                    <input type="checkbox" class="check-box" style="margin: 30px 10px 30px 0;"><span style="color: #777; font-size: 12px; bottom: 68px; position: absolute;">I agree to the terms & conditions</span>
+                    <button type="submit" class="submit-btn" style="width: 85%; padding: 10px 30px; cursor: pointer; display: block; margin: auto; background: linear-gradient(to right, #76BA99, #CFF5E7); outline: none; border-radius: 30px;">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("signin");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function signin() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+
+</html>

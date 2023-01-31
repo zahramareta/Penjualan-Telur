@@ -1,0 +1,55 @@
+<div class="container mt-3">
+    <h4 style="color: #7D6E83;">Data Member</h4>
+    <hr>
+    <ul class="list-group my-2">
+        <% data.forEach(member=> { %>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Nama Member</small> <br />
+                        <%= member.nama_member %>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Alamat</small> <br />
+                        <%= member.alamat %>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Telepon</small> <br />
+                        <%= member.telepon %>
+
+                    </div>
+
+                    <div class="col-lg-3">
+                        <small style="color: #76BA99; font-weight: bolder;">Action</small> <br />
+
+                        <!-- button edit -->
+                        <a href="/member/edit/<%= member.id_member %>">
+                            <button class="btn btn-sm btn-primary">
+                                Edit
+                            </button>
+                        </a>
+
+                        <!-- button delete -->
+                        <a href="/member/delete/<%= member.id_member %>"
+                            onclick="return confirm(`Apakah Anda yakin ingin menghapus data ini?`)">
+                            <button class="btn btn-sm btn-danger">
+                                Hapus
+                            </button>
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+            <% }) %>
+    </ul>
+
+    <!-- button add new data -->
+    <a href="/member/add">
+        <button class="btn btn-md btn-success">
+            Tambah Data
+        </button>
+    </a>
+
+</div>
